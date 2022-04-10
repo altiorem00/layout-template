@@ -1,0 +1,36 @@
+</main>
+</div>
+<footer class="page__bottom">
+    {{>footer/footer}}
+</footer>
+<script>
+    // Lazy loading
+    (async () => {
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll("img");
+            images.forEach(img => {
+                img.loading = 'lazy'
+            });
+        } else {
+            const scriptPromise = new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                document.body.appendChild(script);
+                script.onload = resolve;
+                img.dataset.src = img.src
+                img.classList.add('lazy')
+                script.onerror = reject;
+                script.async = true;
+                script.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js';
+            });
+            scriptPromise.then(() => {
+                const lazyLoadInstance = new LazyLoad({});
+            });
+        }
+    })();
+</script>
+<script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+<script>svg4everybody();</script>
+<script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.header {
+    transition: box-shadow ease-in-out 200ms;
+    position: relative;
+    z-index: 999;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        height: 54px;
+        align-items: center;
+        padding: 0px 32px;
+        background-color: $c-white;
+
+        @include respond-to(lg) {
+            padding: 0px 15px;
+        }
+        @include respond-to(md) {
+            height: 34px;
+        }
+    }
+
+    &.animated {
+        transition: transform ease-in-out 200ms, background-color ease-in-out 200ms,
+            box-shadow ease-in-out 200ms;
+    }
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        transform: translateY(-100%);
+        left: 0;
+    }
+
+    &.show {
+        box-shadow: 0px 8px 15px rgba(85, 93, 106, 0.08);
+        background-color: $c-white;
+        transform: translateY(0);
+    }
+}

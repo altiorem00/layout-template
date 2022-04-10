@@ -1,0 +1,124 @@
+// Common styles of the project
+
+html,
+body {
+    height: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+}
+h1 {
+    @include font-size-get('h1');
+}
+
+h2 {
+    @include font-size-get('h2');
+}
+
+h3 {
+    @include font-size-get('h3');
+}
+
+h4 {
+    @include font-size-get('h4');
+}
+
+h5 {
+    @include font-size-get('h5');
+}
+
+a {
+    color: $c-black;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.page {
+    &__inner {
+        overflow: hidden;
+        padding-bottom: 64px;
+        @include respond-to(xl) {
+            padding-bottom: 57px;
+        }
+        @include respond-to(lg) {
+            padding-bottom: 49px;
+        }
+        @include respond-to(md) {
+            padding-bottom: 41px;
+        }
+    }
+    &__top {
+
+    }
+}
+html,
+body {
+    &::-webkit-scrollbar {
+        width: 0px;
+        max-width: 0px;
+    }
+}
+button {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0px;
+}
+.page__wrapper {
+    min-height: 100%;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}
+
+.section .row-fix {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.section .row-fix-r {
+    padding-right: 0;
+}
+body {
+    overflow-x: hidden;
+}
+html {
+}
+.fslightbox-open {
+    overflow: initial !important;
+    & body {
+        overflow: hidden;
+    }
+}
+.container {
+    &--disable {
+        &-md {
+            @include respond-to(md) {
+                padding: 0px !important;
+            }
+        }
+        &-sm {
+            @include respond-to(sm) {
+                padding: 0px !important;
+            }
+        }
+    }
+}
+html body {
+    font-family: $font-family-base;
+    font-weight: normal;
+}

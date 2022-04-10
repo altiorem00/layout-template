@@ -1,0 +1,28 @@
+<div class="map-shell">
+    <div class="map" id="mapContacts"></div>
+</div>
+<script>
+    (() => {
+        let arDataContact = {
+            yandexMapID: 'mapContacts',
+            zoom: 12,
+            center: { 'lat': 47.227483, 'lng': 39.716666 },
+            points: [
+                {
+                    position: {
+                        lat: 47.227483,
+                        lng: 39.716666,
+                    },
+                    title: " ",
+                    id: "1",
+                    imgUrl: '/static/img/content/map/map.png',
+                    imgSize: [50, 80],
+                },
+            ]
+        };
+        ymaps.ready(function () {
+            initYandexMap(arDataContact).then((response) => {
+            });
+        });
+    })();
+</script>

@@ -1,0 +1,100 @@
+.section {
+    & + & {
+        margin-top: 64px;
+        @include respond-to(xl) {
+            margin-top: 56px;
+        }
+        @include respond-to(lg) {
+            margin-top: 48px;
+        }
+        @include respond-to(md) {
+            margin-top: 40px;
+        }
+    }
+    & + &--concat {
+        margin-top: -68px;
+        @include respond-to(md) {
+            margin-top: 0px;
+        }
+    }
+    & + &--mt-40 {
+        margin-top: 40px;
+    }
+    & + &--mt-32 {
+        margin-top: 32px;
+        @include respond-to(md) {
+            margin-top: 24px;
+        }
+    }
+    &__header {
+        &-title {
+            @include font-size-get('h2');
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            & + * {
+                margin-top: 24px;
+                @include respond-to(md) {
+                    margin-top: 16px;
+                }
+            }
+            .button {
+                @include respond-to(md) {
+                    display: none;
+                }
+            }
+            &--btn {
+                @include respond-to(md) {
+                    flex-direction: column;
+                }
+                .button {
+                    @include respond-to(md) {
+                        display: flex;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+        &-desc {
+            & + * {
+                margin-top: 24px;
+                @include respond-to(lg) {
+                    margin-top: 16px;
+                }
+            }
+            @include font-size-get('p1');
+            max-width: 67%;
+            @include respond-to(lg) {
+                max-width: 100%;
+            }
+        }
+        &-action {
+            display: flex;
+        }
+    }
+    &__header + &__body {
+        margin-top: 24px;
+        @include respond-to(md) {
+            margin-top: 16px;
+        }
+    }
+    &__footer {
+        margin-top: 32px;
+        @include respond-to(md) {
+            margin-top: 16px;
+        }
+        .button {
+            @include respond-to(md) {
+                display: flex;
+                width: 100%;
+                a {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    & + &--mt-0 {
+        margin-top: 0px;
+    }
+
+}

@@ -1,0 +1,19 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: opacity ease-in-out 300ms;
+    opacity: 0;
+    &.active {
+        opacity: 1 !important;
+    }
+    &__inner {
+        &--mt-32 {
+            margin-top: 32px;
+        }
+        &--pb-0 {
+            padding-bottom: 0px;
+            margin-top: 32px;
+        }
+    }
+}

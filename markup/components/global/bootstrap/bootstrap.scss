@@ -1,0 +1,63 @@
+.row {
+    &--around {
+        &-30 {
+            margin: -15px;
+            & > * {
+                padding: 15px;
+            }
+        }
+        &-16 {
+            margin: -8px -15px;
+            & > * {
+                padding: 8px 15px;
+            }
+        }
+        &-24 {
+            margin: -12px -15px;
+            & > * {
+                padding: 12px 15px;
+            }
+        }
+        &-24-16 {
+            margin: -12px -15px;
+            @include respond-to(md) {
+                margin: -8px -15px;
+            }
+            & > * {
+                padding: 12px 15px;
+                @include respond-to(md) {
+                    padding: 8px 15px;
+                }
+            }
+        }
+    }
+}
+.popover-arrow {
+    display: none !important;
+}
+.popover-header {
+    padding: 0px;
+    font-size: initial;
+    background-color: transparent;
+}
+.popover {
+    max-width: initial;
+    font-family: inherit;
+    font-style: initial;
+    font-weight: initial;
+    line-height: initial;
+    text-align: initial;
+    text-decoration: initial;
+    text-shadow: initial;
+    text-transform: initial;
+    letter-spacing: initial;
+    font-size: initial;
+    word-wrap: initial;
+    background-color: initial;
+    background-clip: initial;
+    border: initial;
+    border-radius: initial;
+}
+.popover-header {
+    border: none;
+}

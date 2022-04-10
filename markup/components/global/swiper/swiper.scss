@@ -1,0 +1,19 @@
+.swiper {
+    &--stretch {
+        .swiper {
+            &-slide {
+                height: unset;
+                & > * {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &--overflow-opacity {
+        .swiper {
+            &-slide {
+                will-change: opacity;
+            }
+        }
+    }
+}
