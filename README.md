@@ -43,7 +43,21 @@ npm i
 
 ## Основные команды
 
-'tars dev --lr' — запускает dev-режим сборки.
-'tars build -m' — запускает build-режим сборки.
-'tars update' — обновляет TARS-CLI.
-'tars update-project' — обновляет TARS В текущем проекте.
+Запускает dev-режим сборки:
+
+```bash
+tars dev --lr
+```
+
+Запускает build-режим сборки:
+
+```bash
+tars build -m
+```
+
+Обновляет TARS-CLI:
+
+```bash
+tars update
+```
+
