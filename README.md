@@ -32,6 +32,12 @@ npm i -g npm
 npm i -g tars-cli
 ```
 
+Клонируем репозиторий.
+
+```shell
+git clone https://github.com/altiorem00/layout-template.git
+```
+
 Затем устанавливаем зависимости.
 
 ```shell
